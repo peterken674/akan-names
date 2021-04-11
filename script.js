@@ -4,11 +4,12 @@ function getBirthday() {
 
     if (!!date.valueOf()) {
         let year = date.getFullYear().toString();
-        let month = date.getMonth()+1;
-        let dayOfMonth = date.getDate();
+        // let MM = date.getMonth()+1;
+        // let DD = date.getDate();
+        // let CC = parseInt(year.slice(0,2));
+        // let YY = parseInt(year.slice(2,4));
+        // let dayOfWeek = (((CC / 4) - 2 * CC - 1) + (5 * YY / 4) + (26 * (MM + 1) / 10) + DD) % 7;
         let dayOfWeek = date.getDay();
-        let CC = parseInt(year.slice(0,2));
-        let YY = parseInt(year.slice(2,4));
         alert(dayOfWeek);
     }
     else{
