@@ -15,18 +15,20 @@ function getBirthday() {
         let dayOfWeek = date.getDay();
 
     } else {
-        // alert("Please select your birthday.")
+        alert("Please select your birthday.")
     }
 }
 
 function getGender() {
+    let gender;
     if ((form.gender[0].checked == true) || (form.gender[1].checked == true)) {
         if (form.gender[0].checked == true) {
-            alert("Male")
+            gender = 0;
         } else if (form.gender[1].checked == true) {
-            alert("Female")
+            gender = 1;
         } else {
             alert("Please select your gender!");
         }
     }
+    return gender;
 }
