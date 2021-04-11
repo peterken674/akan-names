@@ -75,3 +75,18 @@ button{
     font-size: 1.3rem;
     font-weight: 700;
 }
+footer{
+    height: 5vh;
+    background-color: #c06014;
+    color: #f3f4ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+footer a{
+    color: #f3f4ed;
+    text-decoration: none;
+}
