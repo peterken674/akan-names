@@ -4,6 +4,7 @@
 body{
     margin: 0;
     font-family: 'Lato', sans-serif;
+    background-color: #f3f4ed;
 }
 .header{
     height: 30vh;
@@ -31,7 +32,7 @@ body{
 h1{
     position: absolute;
     z-index: 5;
-    color: white;
+    color: #f3f4ed;
     text-transform: uppercase;
     font-size: 3.5rem;
 }
@@ -42,9 +43,30 @@ h1{
 }
 .content{
     width: 50%;
-    color: rgb(70, 70, 70);
+    color: #424642;
     font-size: 1.1rem;
 }
 input{
     margin: 0.6rem 0;
+}
+#date{
+    border: none;
+    color: #536162;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+}
+label{
+    color: #c06014;
+}
+button{
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: none;
+    background-color: #c06014;
+    color: #f3f4ed;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.3rem;
 }
