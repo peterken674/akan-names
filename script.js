@@ -35,9 +35,12 @@ function getGender() {
 
 function computeName() {
     let selectedGender = getGender();
+    let dayOfWeek = getBirthday();
     if (selectedGender === 0){
-        alert("Your Akan name is " + maleNames[getBirthday()]+".");
+        let result = "Your Akan name is " + maleNames[dayOfWeek] + ".";
+        document.getElementById("result").innerHTML = result;
     } else if (selectedGender === 1) {
-        alert("Your Akan name is " + femaleNames[getBirthday()] + ".");
+        let result = "Your Akan name is " + femaleNames[dayOfWeek] + ".";
+        document.getElementById("result").innerHTML = result;
     }
 }
