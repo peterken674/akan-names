@@ -13,7 +13,7 @@ function getBirthday() {
         // let YY = parseInt(year.slice(2,4));
         // let dayOfWeek = (((CC / 4) - 2 * CC - 1) + (5 * YY / 4) + (26 * (MM + 1) / 10) + DD) % 7;
         let dayOfWeek = date.getDay();
-
+        return dayOfWeek;
     } else {
         alert("Please select your birthday.")
     }
@@ -26,9 +26,18 @@ function getGender() {
             gender = 0;
         } else if (form.gender[1].checked == true) {
             gender = 1;
-        } else {
-            alert("Please select your gender!");
         }
+        return gender;
+    } else {
+        alert("Please select your gender!"); 
     }
-    return gender;
+}
+
+function computeName() {
+    let selectedGender = getGender();
+    if (selectedGender === 0){
+        alert("Your Akan name is " + maleNames[getBirthday()]+".");
+    } else if (selectedGender === 1) {
+        alert("Your Akan name is " + femaleNames[getBirthday()] + ".");
+    }
 }
