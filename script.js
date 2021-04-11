@@ -13,18 +13,20 @@ function getBirthday() {
         // let YY = parseInt(year.slice(2,4));
         // let dayOfWeek = (((CC / 4) - 2 * CC - 1) + (5 * YY / 4) + (26 * (MM + 1) / 10) + DD) % 7;
         let dayOfWeek = date.getDay();
-        
-    }
-    else{
+
+    } else {
         // alert("Please select your birthday.")
     }
 }
-function getGender(){
-    if ((form.gender[0].checked == true) || (form.gender[1].checked == true)) {
-        alert("Good");
-    }
-    else{
-        alert("Please select your gender!");
-    }
 
+function getGender() {
+    if ((form.gender[0].checked == true) || (form.gender[1].checked == true)) {
+        if (form.gender[0].checked == true) {
+            alert("Male")
+        } else if (form.gender[1].checked == true) {
+            alert("Female")
+        } else {
+            alert("Please select your gender!");
+        }
+    }
 }
