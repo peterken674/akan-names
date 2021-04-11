@@ -17,5 +17,11 @@ function getBirthday() {
     }
 }
 function getGender(){
-    
+    if ((form.gender[0].checked == true) || (form.gender[1].checked == true)) {
+        alert("Good");
+    }
+    else{
+        alert("Please select your gender!");
+    }
+
 }
