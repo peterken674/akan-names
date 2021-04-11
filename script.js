@@ -15,7 +15,8 @@ function getBirthday() {
         let dayOfWeek = date.getDay();
         return dayOfWeek;
     } else {
-        alert("Please select your birthday.")
+        alert("Please select your birthday.");
+        return;
     }
 }
 
@@ -29,18 +30,23 @@ function getGender() {
         }
         return gender;
     } else {
-        alert("Please select your gender!"); 
+        alert("Please select your gender!");
+        return;
     }
 }
 
 function computeName() {
     let selectedGender = getGender();
     let dayOfWeek = getBirthday();
-    if (selectedGender === 0){
-        let result = "Your Akan name is " + maleNames[dayOfWeek] + ".";
-        document.getElementById("result").innerHTML = result;
-    } else if (selectedGender === 1) {
-        let result = "Your Akan name is " + femaleNames[dayOfWeek] + ".";
-        document.getElementById("result").innerHTML = result;
+    if ((!!dayOfWeek.valueOf() === true) || (dayOfWeek == 0))  {
+        if (selectedGender === 0) {
+            let result = "Your Akan name is " + maleNames[dayOfWeek] + ".";
+            document.getElementById("result").innerHTML = result;
+        } else if (selectedGender === 1) {
+            let result = "Your Akan name is " + femaleNames[dayOfWeek] + ".";
+            document.getElementById("result").innerHTML = result;
+        }
+    }else{
+        return;
     }
 }
