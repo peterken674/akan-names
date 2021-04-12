@@ -50,3 +50,7 @@ function computeName() {
         return;
     }
 }
+//Clear output when date of birth or gender is changed.
+function clearOutput(){
+    document.getElementById("result").innerHTML = " ";
+}
